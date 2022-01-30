@@ -10,7 +10,7 @@ const main = async () => {
     const issues = await findIssuesForComponents({
       components,
       projectKey: PROJECT_KEY,
-      maxResultPerReq: 10,
+      // maxResultPerReq: 10,
     })
     printReport({ components, issues })
   } catch (err) {

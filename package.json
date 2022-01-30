@@ -4,8 +4,9 @@
   "description": "This repo fetches a list of Jira components from a given project that do not have a lead.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha './tests/**/*.test.js'",
-    "dev": "nodemon index.js"
+    "test": "NODE_ENV=development node index.js",
+    "dev": "nodemon index.js",
+    "start": "NODE_ENV=production node index.js"
   },
   "repository": {
     "type": "git",
