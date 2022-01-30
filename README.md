@@ -86,7 +86,7 @@ To generate the final report, we are using a utility function called `printRepor
 
 To see more about the underlying mechanisms, run the code using `npm run test` instead of `npm run start`. This will show more logs about each step.
 
-## Changing number of issues per request
+## Changing the number of issues per request
 
 By default, we ask for 100 issues when requesting issues from JIRA API. This can be changed by providing an input called `maxResultPerReq` to the findIssuesForComponents service.
  
