@@ -76,7 +76,7 @@ main()
 
 ```
 
-Here we simply define a `main` function and run it. You can use the main services defined in the `/services` directory independently to get a list of unassigned components of a project (`fetchUnassignedComponents`), and to get the list of issues related to an array of components (`findIssuesForComponents`).
+Here we simply define the `main` function and run it. You can use the main services defined in the `/services` directory independently to get a list of unassigned components of a project (`fetchUnassignedComponents`), and to get the list of issues related to an array of components (`findIssuesForComponents`).
 
 ## The report
 
@@ -84,7 +84,7 @@ To generate the final report, we are using a utility function called `printRepor
 
 ## See how it works
 
-To see more about the underlying mechanisms, run the code using `npm run test` instead of `npm run start`. This will show more logs about each steps.
+To see more about the underlying mechanisms, run the code using `npm run test` instead of `npm run start`. This will show more logs about each step.
 
 ## Changing number of issues per request
 
