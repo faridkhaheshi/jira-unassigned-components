@@ -23,7 +23,10 @@ const findIssuesForComponents = async ({
     fixedParams: { jql, fields: "components" },
     resultsKey: "issues",
   })
+
   console.log(`fetched ${issues.length} issues from the API`)
+  console.log("")
+  console.log("")
 
   return issues
 }

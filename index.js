@@ -1,6 +1,7 @@
 const fetchUnassignedComponents = require("./services/components/fetch-unassigned-components")
 const findIssuesForComponents = require("./services/issues/find-issues-for-components")
-const printComponents = require("./utilities/print-components")
+// const printComponents = require("./utilities/print-components")
+const printReport = require("./utilities/print-report")
 
 const PROJECT_KEY = "IC"
 
@@ -12,8 +13,7 @@ const main = async () => {
       projectKey: PROJECT_KEY,
       // maxResultPerReq: 10,
     })
-
-    printComponents(components)
+    printReport({ components, issues })
   } catch (err) {
     console.error(err)
   }

@@ -8,9 +8,7 @@ const fetchPaginatedApi = async ({
   resultsKey,
 }) => {
   console.log(`
-Retrieving ${resultsKey} ${startAt}-${
-    maxResults + startAt - 1
-  } from the API.  `)
+Retrieving ${maxResults} ${resultsKey} from the API.  `)
   const { data } = await axios.get(uri, {
     params: { ...fixedParams, startAt, maxResults },
   })
