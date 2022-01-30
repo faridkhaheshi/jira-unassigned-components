@@ -1,4 +1,5 @@
 const axios = require("axios")
+const log = require("./log")
 
 const fetchPaginatedApi = async ({
   uri,
@@ -7,7 +8,7 @@ const fetchPaginatedApi = async ({
   startAt = 0,
   resultsKey,
 }) => {
-  console.log(`
+  log(`
 Retrieving ${maxResults} ${resultsKey} from the API.  `)
   const { data } = await axios.get(uri, {
     params: { ...fixedParams, startAt, maxResults },
@@ -18,7 +19,7 @@ Retrieving ${maxResults} ${resultsKey} from the API.  `)
     maxResults: returnedMaxResults,
   } = data
   let results = data[resultsKey]
-  console.log(
+  log(
     `-> Retrieved ${results.length} ${resultsKey} (${returnedStartAt}-${
       returnedStartAt + results.length - 1
     })/${total} from the API. Max results: ${returnedMaxResults}.`
@@ -37,7 +38,7 @@ Retrieving ${maxResults} ${resultsKey} from the API.  `)
     })
     results = results.concat(tempResults)
   } else {
-    console.log("")
+    log("")
   }
 
   return results
